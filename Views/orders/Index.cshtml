@@ -1,0 +1,153 @@
+﻿@model IEnumerable<Superstore.Models.ordersModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.sRowID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sOrderId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sOrderDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sShipDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sShipMode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sCustomerID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sSegment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sCity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sState)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sCountry)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sRegion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sMarket)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sProductId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sCategory)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sSubCategory)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sProductName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dSales)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.iQuantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dProfit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dShippingCost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sOrderPriority)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.sRowID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sOrderId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sOrderDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sShipDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sShipMode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sCustomerID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sSegment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sCity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sState)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sCountry)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sRegion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sMarket)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sProductId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sCategory)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sSubCategory)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sProductName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dSales)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.iQuantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dProfit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dShippingCost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sOrderPriority)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

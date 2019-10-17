@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Superstore.Models.peopleModel>
+﻿@model IEnumerable<Superstore.Models.returnsModel>
 
 @{
     ViewBag.Title = "Index";
@@ -12,10 +12,13 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Person)
+            @Html.DisplayNameFor(model => model.sReturned)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Region)
+            @Html.DisplayNameFor(model => model.sOrderID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sRegion)
         </th>
         <th></th>
     </tr>
@@ -23,10 +26,13 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Person)
+            @Html.DisplayFor(modelItem => item.sReturned)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Region)
+            @Html.DisplayFor(modelItem => item.sOrderID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sRegion)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |

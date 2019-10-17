@@ -13,26 +13,25 @@ namespace Superstore.Models
         public ObjectId Id { get; set; }
 
         [BsonElement("Row ID")]
-        public string sRowID { get; set; }
+        public int sRowID { get; set; }
 
         [BsonElement("Order ID")]
         public string sOrderId { get; set; }
 
+        [BsonElement("Order Date")]
+        public string sOrderDate { get; set; }
+
         [BsonElement("Ship Date")]
-        public DateTime dShipDate { get; set; }
+        public string sShipDate { get; set; }
 
         [BsonElement("Ship Mode")]
         public string sShipMode { get; set; }
 
         [BsonElement("Customer ID")]
         public string sCustomerID { get; set; }
-
-
+        
         [BsonElement("Segment")]
         public string sSegment { get; set; }
-
-        [BsonElement("Postal Code")]
-        public string sPostalCode { get; set; }
 
         [BsonElement("City")]
         public string sCity { get; set; }
@@ -62,16 +61,13 @@ namespace Superstore.Models
         public string sProductName { get; set; }
 
         [BsonElement("Sales")]
-        public double dSales { get; set; }
+        public string dSales { get; set; }
 
         [BsonElement("Quantity")]
         public int iQuantity { get; set; }
 
-        [BsonElement("Discount")]
-        public double dDiscount { get; set; }
-
         [BsonElement("Profit")]
-        public double dProfit { get; set; }
+        public string dProfit { get; set; }
 
         [BsonElement("Shipping Cost")]
         public double dShippingCost { get; set; }
